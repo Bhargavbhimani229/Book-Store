@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluied p-3 mt-4">
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Book List</h2>
+            <div>
+                <a class="btn btn-primary" href="/bookform">Add New Book</a>
+                <a class="btn btn-danger" href="/login">Logout</a>
+            </div>
+        </header>
+
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+              <%   books.forEach((book , index)=>{ %>  
+                  <tr>
+                    <td><%= index+1 %></td>
+                    <td><%= book.bookName %></td>
+                    <td><%= book.author %></td>
+                    <td><%= book.price %></td>
+                    <td><%= book.description %></td>
+                    <td><%= book.imageUrl %></td>
+                    <td>
+                      <a href="/book/delete/<%= book.id  %>" class="btn btn-danger">Delete</a>
+                      <a href="" class="btn btn-warning">Edit</a>
+                    </td>
+                  </tr> 
+                  
+                <%  }) %>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
