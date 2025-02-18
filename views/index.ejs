@@ -1,79 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <header class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
-        <h2 class="m-0">Book Store</h2>
-        <button class="btn btn-primary">View Books</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #343a40;
+        color: #fff;
+        padding: 15px 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      header h2 {
+        margin: 0;
+        font-size: 2rem;
+      }
+      .carousel-item img {
+        height: 350px;
+        object-fit: cover;
+      }
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        border-radius: 5px;
+      }
+      .carousel-caption h5, .carousel-caption p {
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      .card {
+        border: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px;
+        background-color: #fff;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+      .card img {
+        height: 250px;
+        object-fit: cover;
+      }
+      .badge-new {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+      }
+      .badge-bestseller {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #28a745;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #212529;
+        margin-bottom: 30px;
+      }
+      .btn {
+        transition: background-color 0.3s ease;
+      }
+      .btn-success {
+        background-color: #28a745;
+        color: #fff;
+      }
+      .btn-success:hover {
+        background-color: #218838;
+      }
+      .btn-info {
+        background-color: #17a2b8;
+        color: #fff;
+      }
+      .btn-info:hover {
+        background-color: #138496;
+      }
+      .card-body {
+        padding: 1.2rem;
+      }
+      .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+      }
+      .card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #343a40;
+      }
+      footer {
+        background-color: #343a40;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 1rem;
+      }
+      footer a {
+        color: #ffc107;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="d-flex justify-content-between">
+      <h2>Book Store</h2>
+      <a href="#" class="btn btn-success">view All Card</a>
     </header>
-    
-    <!-- Slider Section -->
-    <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="book1.jpg" class="d-block w-100" alt="Book 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Book Title 1</h5>
-                    <p>Author 1</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="book2.jpg" class="d-block w-100" alt="Book 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Book Title 2</h5>
-                    <p>Author 2</p>
-                </div>
-            </div>
+
+    <!-- Carousel Section -->
+    <div id="bookCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../asites/image/img1.webp" class="d-block w-100" alt="Dr. A.P.J. Abdul Kalam" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Dr. A.P.J. Abdul Kalam</h5>
+            <p>Manasvi Vohra</p>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+        <div class="carousel-item">
+          <img src="../asites/image/img2.webp" class="d-block w-100" alt="Mahabharat" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mahabharat</h5>
+            <p>Ved Vyasa</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../asites/image/img3.webp" class="d-block w-100" alt="Ramayan" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ramayan</h5>
+            <p>Valmiki</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
     </div>
-    
+
     <!-- Best Seller Section -->
     <section class="container my-5">
-        <h3>Best Seller Books</h3>
-        <div class="card">
-            <img src="bestseller.jpg" class="card-img-top" alt="Best Seller Book">
+      <h3 class="section-title">👉 Best Seller Books</h3>
+      <div class="row">
+        <% bestSeller.forEach((book) => { %>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <span class="badge-bestseller">Best Seller</span>
+            <img src="<%= book.imageUrl %>" class="card-img-top" alt="<%= book.bookName %>" />
             <div class="card-body">
-                <h5 class="card-title">Best Seller Title</h5>
-                <p class="card-text">by Best Seller Author</p>
-                <p class="card-text">This is the description of the best seller book.</p>
+              <h5 class="card-title text-primary"><%= book.bookName %></h5>
+              <p class="card-text text-muted">by <%= book.author %></p>
+              <p class="card-text"><strong>Price:</strong> $<%= book.price %></p>
+              <p class="card-text text-truncate"><%= book.description %></p>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-success">Buy Now</a>
+                <a href="#" class="btn btn-info">View Details</a>
+              </div>
             </div>
+          </div>
         </div>
+        <% }) %>
+      </div>
     </section>
-    
-    <!-- Popular Books Section -->
-  <!-- Popular Books Section -->
-<section class="container my-5">
-    <h3>Newly Added Books</h3>
-    <div class="row">
-            <% books.forEach((book)=> { %>
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <img src="<%= book.imageUrl %>" class="card-img-top" alt="<%= book.bookName %>">
-                        <div class="card-body">
-                            <h5 class="card-title"><%= book.bookName %></h5>
-                            <p class="card-text">by <%= book.author %></p>
-                            <p class="card-text">Price: $<%= book.price %></p>
-                            <p class="card-text"><%= book.description %></p>
-                        </div>
-                    </div>
-                </div>
-            <% }) %>
-    </div>
-</section>
 
-    
-    
+    <!-- Newly Added Books Section -->
+    <section class="container my-5">
+      <h3 class="section-title">👉 Newly Added Books</h3>
+      <div class="row">
+        <% popular.forEach((book) => { %>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <span class="badge-new">New</span>
+            <img src="<%= book.imageUrl %>" class="card-img-top" alt="<%= book.bookName %>" />
+            <div class="card-body">
+              <h5 class="card-title text-primary"><%= book.bookName %></h5>
+              <p class="card-text text-muted">by <%= book.author %></p>
+              <p class="card-text"><strong>Price:</strong> $<%= book.price %></p>
+              <p class="card-text text-truncate"><%= book.description %></p>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-success">Buy Now</a>
+                <a href="#" class="btn btn-info">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 Book Store. All rights reserved.</p>
+      <p>Designed with ❤️ by BH@RGAV BHIMANI  | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
+
+
+
+
+

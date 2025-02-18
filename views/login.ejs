@@ -8,15 +8,76 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f4f7fa;
+            font-family: 'Arial', sans-serif;
         }
+
         .login-container {
-            max-width: 400px;
-            margin: 80px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            margin: 100px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h3 {
+            font-size: 1.8rem;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #6c757d;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            box-shadow: none;
+            border: 1px solid #ced4da;
+            padding: 12px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .text-center a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .text-center a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #842029;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .alert-danger strong {
+            font-weight: 600;
         }
     </style>
 </head>
@@ -24,23 +85,26 @@
 
     <div class="container">
         <div class="login-container">
-            <h3 class="text-center mb-4">Login</h3>
+            <h3>Login</h3>
 
+            <!-- Error message (if any) -->
             <% if (error) { %>
                 <div class="alert alert-danger">
-                    <%= error %>
+                    <strong>Error:</strong> <%= error %>
                 </div>
             <% } %>
+
+            <!-- Login Form -->
             <form action="/login" method="POST">
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="email" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Login</button>
+                <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
                 <p class="text-center mt-3">
                     <a href="#">Forgot password?</a> | <a href="/">Sign up</a>
                 </p>
