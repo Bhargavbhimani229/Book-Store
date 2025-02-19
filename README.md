@@ -213,15 +213,15 @@ Example Credentials in Code:
 
   # screenshorts
   1. Login.ejs
-  ![alt text](localhost_8059_login.png)
+  ![alt text](Screen-shot/localhost_8059_login.png)
   2. BookForm.ejs
-  ![alt text](localhost_8059_bookform.png)
+  ![alt text](Screen-shot/localhost_8059_bookform.png)
   3. BookList.ejs
- ![alt text](localhost_8059_bookList.png)
+ ![alt text](Screen-shot/localhost_8059_bookList.png)
   4. Edit.ejs 
-  ![alt text](localhost_8059_book_edit_67b36013d9e1f1c6b07093fd.png)
+  ![alt text](Screen-shot/localhost_8059_book_edit_67b36013d9e1f1c6b07093fd.png)
   5. Index.ejs
-  ![alt text](<localhost_8059_ (1).png>)
+  ![alt text](Screen-shot/<localhost_8059_ (1).png>)
 
 
 
