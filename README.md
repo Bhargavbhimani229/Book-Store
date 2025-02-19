@@ -221,8 +221,4 @@ Example Credentials in Code:
   4. Edit.ejs 
   ![alt text](Screen-shot/localhost_8059_book_edit_67b36013d9e1f1c6b07093fd.png)
   5. Index.ejs
-  ![alt text](Screen-shot/localhost_8059_index.png)
-
-
-
-
+ ![alt text](<localhost_8059_ (2).png>)
