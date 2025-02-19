@@ -19,8 +19,6 @@ app.get("/", (req, res) => {
   Book.find({})
     .then((allBooks) => {
       const bestSeller = allBooks.filter(book => book.bestseller === true);
-      console.log("Bestseller book", allBooks);
-      
       const popular = allBooks.filter(book => book.bestseller === false);
       
       res.render("index", { bestSeller, popular });
@@ -71,7 +69,6 @@ app.post('/book/edit', (req, res) => {
     bestseller: bestseller === 'on' 
   })
   .then(() => {
-    console.log("Book Updated...");
     return res.redirect('/bookList'); 
   })
   .catch((err) => {
@@ -87,7 +84,6 @@ app.get("/bookList", (req, res) => {
       res.render("bookList", { books }); 
     })
     .catch((err) => {
-      console.log(err.message);
       res.render("bookList", { books: [] }); 
     });
 });
@@ -117,14 +113,11 @@ app.post("/login", (req, res) => {
 });
 
 // ---------------------- Add Book Route ----------------------
-app.post("/addbook", (req, res) => {
-  console.log(req.body);
-  
+app.post("/addbook", (req, res) => {  
   req.body.bestseller = req.body.bestseller === 'on'; 
 
   Book.create(req.body)
     .then((data) => {
-      console.log(req.body);
       res.redirect("/bookList"); 
     })
     .catch((err) => {
