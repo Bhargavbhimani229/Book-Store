@@ -211,6 +211,16 @@ Example Credentials in Code:
   Books are categorized as Best Seller or New based on the admin’s input.
   Users can browse through the collection and view details about each book.
 
+  # screenshorts
+  1. Login.ejs
+  ![alt text](localhost_8059_login.png)
+  2. BookForm.ejs
+  ![alt text](localhost_8059_bookform.png)
+  3. BookList.ejs
+ ![alt text](localhost_8059_bookList.png)
+  4. Index.ejs
+  ![alt text](<localhost_8059_ (1).png>)
+
 
 
 
